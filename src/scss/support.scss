@@ -1,0 +1,7 @@
+.support-page {
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: toRem(24);
+		}
+	}
+}

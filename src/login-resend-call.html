@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/_head.htm',{
+"title":"Новая система скидок в Language2GO!"
+})
+
+<body>
+  <div class="wrapper">
+    <div class="login">
+      <a href="#" class="login__logo">
+        <svg>
+          <use xlink:href="@img/icons/icons.svg#logo"></use>
+        </svg>
+      </a>
+      <div class="login__inner">
+        <div class="login__content">
+          <div class="login__head">
+            <h2 class="login__title title title--h2">Введите код</h2>
+            <div class="login__text">
+              <p>Введите последние 4 цифры входящего вызова, с номера: <span>+7 (999) 999-ХХ-ХХ</span></p>
+            </div>
+            <a href="#" class="login__link">Изменить</a>
+          </div>
+          <form action="#" method="POST" class="login__form-code login-form-code">
+            <input class="login-form-code__input" type="text" name="forms[]" maxlength="1" />
+            <input class="login-form-code__input" type="number" name="forms[]" maxlength="1" />
+            <input class="login-form-code__input" type="number" name="forms[]" maxlength="1" />
+            <input class="login-form-code__input" type="number" name="forms[]" maxlength="1" />
+          </form>
+          <div class="login__bottom">
+            <a href="#" class="login__btn button button--big button--fw">Заказать повторный звонок</a>
+            <a href="#" class="login__link">Отправить смс с кодом</a>
+          </div>
+        </div>
+        <div class="login__image">
+          <img src="@img/login/image.png" alt="Image">
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

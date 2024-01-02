@@ -1,0 +1,9 @@
+.faq-page {
+	&__promo {
+		padding-top: toRem(30);
+
+		@media (max-width: $mobile) {
+			padding-top: toRem(10);
+		}
+	}
+}

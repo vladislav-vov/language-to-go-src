@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/_head.htm',{
+"title":"Новая система скидок в Language2GO!"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page support-page">
+      <div class="page__container">
+        <div class="page__columns">
+          <div class="page__content">
+            <div class="page__head article-page__head">
+              <div class="page__head-content">
+                <h1 class="page__title title  title title--h2">Новая система скидок в Language2GO: успейте забрать
+                  максимум!</h1>
+                <div class="page__text">
+                  <p>Если у вас возникли трудности по работе сайта, сложности в оплате или есть вопрос, вы можете
+                    обратиться в службу поддержки, мы обязательно вам поможем.</p>
+                </div>
+              </div>
+              <nav class="page__breadcrumbs breadcrumbs">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__item">
+                    <a href="#" class="breadcrumbs__link"><span>Главная</span></a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                    <span class="breadcrumbs__current">Cлужба поддержки</span>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="page__main">
+              <section>
+                <h2 class="support-page__title title title--h4">Общая информация</h2>
+                <div class="page__text">
+                  <p>Ясность нашей позиции очевидна: консультация с широким активом однозначно определяет каждого
+                    участника как способного принимать собственные решения касаемо прогресса профессионального
+                    сообщества. Как уже неоднократно упомянуто, сделанные на базе интернет-аналитики выводы призывают
+                    нас к новым свершениям, которые, в свою очередь, должны быть объединены в целые кластеры себе
+                    подобных. Являясь всего лишь частью общей картины, явные признаки победы институционализации
+                    подвергнуты целой серии независимых исследований.</p>
+                </div>
+              </section>
+              @@include('html/_form.html', {
+              "title": "Написать в службу поддержки"
+              })
+            </div>
+          </div>
+          <div data-da=".page__head, 991.98, 3" class="page__aside">
+            <div class="page__image">
+              <img src="@img/blog/image.png" alt="Image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+
+  @@include('html/_cookie-popup.html')
+
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

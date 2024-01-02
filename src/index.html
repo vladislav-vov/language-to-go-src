@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Онлайн-школа иностранных языков L2GO</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="img/icons/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicons/favicon-16x16.png">
+  <link rel="manifest" href="img/icons/favicons/site.webmanifest">
+  <link rel="mask-icon" href="img/icons/favicons/safari-pinned-tab.svg" color="#78258d">
+  <meta name="msapplication-TileColor" content="#78258d">
+  <meta name="theme-color" content="#78258d">
+</head>
+
+<body>
+  <div class="rootpage">
+    <h1 class="rootpage__title">Верстка сайта "Онлайн-школа иностранных языков <span>L2GO</span>"</h1>
+    <div class="rootpage__main">
+      <h2 class="rootpage__main-title">Страницы:</h2>
+      <ol class="rootpage__list">
+        <li><a target="_blank" href="home.html">Главная</a></li>
+        <li><a target="_blank" href="catalog.html">Курсы</a></li>
+        <li><a target="_blank" href="course.html">Курс подробно</a></li>
+        <li><a target="_blank" href="blog.html">Блог</a></li>
+        <li><a target="_blank" href="article.html">Статья подробно</a></li>
+        <li><a target="_blank" href="faq.html">Часто задаваемые вопросы</a></li>
+        <li><a target="_blank" href="contacts.html">Контакты</a></li>
+        <li><a target="_blank" href="about.html">О нас</a></li>
+        <li><a target="_blank" href="support.html">Cлужба поддержки</a></li>
+        <li><a target="_blank" href="offers.html">Предложения</a></li>
+        <li><a target="_blank" href="login.html">Логин ввод телефона</a></li>
+        <li><a target="_blank" href="login-code-entry.html">Логин ввод кода</a></li>
+        <li><a target="_blank" href="login-resend-call.html">Логин заказ повторного звонка</a></li>
+      </ol>
+    </div>
+    <div class="rootpage__warning">
+      <h2 class="rootpage__warning-title">
+        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M24.9014 4.16666C13.4681 4.16666 4.16602 13.5125 4.16602 25C4.16602 36.4875 13.5118 45.8333 24.9993 45.8333C36.4868 45.8333 45.8327 36.4875 45.8327 25C45.8327 13.5125 36.4431 4.16666 24.9014 4.16666ZM24.9993 41.6667C15.8098 41.6667 8.33268 34.1896 8.33268 25C8.33268 15.8104 15.7639 8.33332 24.9014 8.33332C34.1473 8.33332 41.666 15.8104 41.666 25C41.666 34.1896 34.1889 41.6667 24.9993 41.6667Z"
+            fill="#fff" />
+          <path d="M22.916 14.5833H27.0827V29.1667H22.916V14.5833ZM22.916 31.25H27.0827V35.4167H22.916V31.25Z"
+            fill="#fff" />
+        </svg>
+        <span>Обнаружили ошибки?</span></h2>
+      <p>Сообщите об обнаруженных ошибках, отправив информацию на следующий адрес электронной почты: <a
+          href="mailto:vladifreelance321@gmail.com">vladifreelance321@gmail.com</a></p>
+    </div>
+  </div>
+
+</body>
+<style>
+  @charset "UTF-8";
+  @import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
+
+  *,
+  *::before,
+  *::after {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    width: 100%;
+    color: #fff;
+    background-color: #efefff;
+  }
+
+  body {
+    font-family: Montserrat;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 1rem;
+  }
+
+  a {
+    color: #51a2d9;
+    text-decoration: none;
+    transition: all .3s ease;
+  }
+
+  a:visited {
+    color: #1CBE2B;
+  }
+
+  a:hover {
+    color: #2e90d1;
+  }
+
+  ul,
+  ol {
+    list-style: none;
+  }
+
+  img {
+    vertical-align: top;
+  }
+
+  .wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+  }
+
+  .rootpage {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 60px;
+  }
+
+  @media (max-width: 767px) {
+    .rootpage {
+      padding: 30px 15px;
+      gap: 40px;
+    }
+  }
+
+  .rootpage__title {
+    color: #232323;
+    font-size: 46px;
+
+    span {
+      background: linear-gradient(133deg, #2E90D1 61.42%, #78258D 83.67%);
+      background-clip: text;
+      color: transparent;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .rootpage__title {
+      font-size: 36px;
+    }
+  }
+
+  .rootpage__main-title {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #232323;
+  }
+
+  @media (max-width: 767px) {
+    .rootpage__main-title {
+      font-size: 24px;
+    }
+  }
+
+  .rootpage__list {
+    color: #232232;
+    font-size: 24px;
+    counter-reset: counter;
+  }
+
+  .rootpage__list li {
+    display: flex;
+    gap: 10px;
+
+    &::before {
+      counter-increment: counter;
+      content: counter(counter) '.';
+      color: #232323;
+    }
+  }
+
+  .rootpage__list li:not(:last-child) {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .rootpage__warning {
+    max-width: 800px;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.45;
+    background: #78258d;
+    box-shadow: 0px 5px 10px 0px #9731b1;
+  }
+
+  .rootpage__warning-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 32px;
+    line-height: 1.2;
+
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .rootpage__warning-title {
+      font-size: 26px;
+    }
+  }
+</style>
+
+</html>

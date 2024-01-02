@@ -1,0 +1,171 @@
+.login {
+	max-width: toRem(720);
+	padding: toRem(40);
+	margin: auto;
+
+	@media (max-width: $mobile) {
+		max-width: toRem(560);
+	}
+
+	&__logo {
+		width: toRem(120);
+		height: toRem(40);
+		@include adaptiveValue('margin-bottom', 40, 20);
+	}
+
+	&__inner {
+		@media (min-width: $mobile) {
+			display: grid;
+			grid-template-columns: minmax(auto, toRem(410)) 1fr;
+			gap: toRem(100);
+		}
+	}
+
+	&__content {
+	}
+
+	&__head {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(10);
+		@include adaptiveValue('margin-bottom', 40, 20);
+		font-size: toRem(16);
+		line-height: 1.5;
+		letter-spacing: toRem(0.32);
+	}
+
+	&__title {
+	}
+
+	&__text {
+		span {
+			color: #333;
+		}
+	}
+
+	&__link {
+		color: $purpleMain;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue('gap', 40, 20);
+	}
+
+	&__divider {
+		position: relative;
+		padding: toRem(20) 0;
+		text-align: center;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%);
+			width: 39%;
+			height: 1px;
+			background-color: #bdbdbd;
+			border-radius: 1px;
+			z-index: -1;
+		}
+
+		&::before {
+			left: 0;
+		}
+
+		&::after {
+			right: 0;
+		}
+	}
+
+	&__auth-list {
+	}
+
+	&__auth-item {
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+
+	&__auth-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: toRem(16);
+		padding: toRem(16);
+		border-radius: 8px;
+		border: 1px solid #bdbdbd;
+		background-color: #fff;
+
+		svg {
+			width: toRem(30);
+			height: toRem(30);
+		}
+	}
+
+	&__image {
+		@media (max-width: $mobile) {
+			display: none;
+		}
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	&__form-code {
+		margin-bottom: toRem(24);
+	}
+
+	&__bottom {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(16);
+		text-align: center;
+	}
+
+	&__btn {
+		white-space: wrap;
+	}
+}
+
+.login-form-code {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: toRem(16);
+
+	@media (max-width: $mobileSmall) {
+		gap: toRem(10);
+	}
+
+	&__input {
+		width: toRem(60);
+		height: toRem(60);
+		padding: toRem(18);
+		border-radius: 8px;
+		background-color: #f2f2f2;
+		line-height: 1.5;
+		letter-spacing: toRem(0.32);
+		color: $mainColor;
+		text-align: center;
+
+		@media (max-width: $mobileSmall) {
+			width: toRem(50);
+			height: toRem(50);
+		}
+
+		&:focus {
+			outline-color: $purpleActive;
+			background-color: transparent;
+		}
+	}
+
+	&__text {
+	}
+
+	&__timer {
+	}
+}

@@ -1,0 +1,19 @@
+.blog-page {
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(toRem(340), 1fr));
+		gap: toRem(40);
+		padding-top: toRem(10);
+
+		@media (max-width: $mobile) {
+			gap: toRem(20);
+			padding-top: 0;
+		}
+	}
+
+	&__item {
+		&:first-child {
+			grid-column: 1/-1;
+		}
+	}
+}

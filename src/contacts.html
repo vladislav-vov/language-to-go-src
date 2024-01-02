@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/_head.htm',{
+"title":"Контакты"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <section class="contacts">
+        <div class="contacts__container">
+          <div class="page__head">
+            <div class="page__head-content">
+              <h1 class="page__title title title title--h2">Контакты</h1>
+              <div class="page__text">
+                <p>Мы на связи в любое удобное время</p>
+              </div>
+            </div>
+            <nav class="page__breadcrumbs breadcrumbs">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a href="#" class="breadcrumbs__link"><span>Главная</span></a>
+                </li>
+                <li class="breadcrumbs__item">
+                  <span class="breadcrumbs__current">Контакты</span>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="contacts__inner">
+            <div class="contacts__items">
+              <div class="contacts__item">
+                <div class="contacts__item-icon">
+                  <img src="@img/contacts/phone.png" alt="Phone image">
+                </div>
+                <div class="contacts__item-content">
+                  <div class="contacts__item-title">По телефону</div>
+                  <ul class="contacts__item-list contacts-item-list">
+                    <li class="contacts-item-list__item">
+                      <a href="tel:74951563550" class="contacts__item-phone">+7 (495) 156-35-50</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="contacts__item">
+                <div class="contacts__item-icon">
+                  <img src="@img/contacts/mail.png" alt="Mail image">
+                </div>
+                <div class="contacts__item-content">
+                  <div class="contacts__item-title">По электронке</div>
+                  <ul class="contacts__item-list contacts-item-list">
+                    <li class="contacts-item-list__item"><a href="mailto:info@language2go.ru"
+                        class="contacts__item-mail">info@language2go.ru</a></li>
+                    <li class="contacts-item-list__item"><a href="mailto:support@language2go.ru"
+                        class="contacts__item-mail">support@language2go.ru</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="contacts__item">
+                <div class="contacts__item-icon">
+                  <img src="@img/contacts/social.png" alt="Social image">
+                </div>
+                <div class="contacts__item-content">
+                  <div class="contacts__item-title">В соц. сетях</div>
+                  <ul class="social social--purple">
+                    <li class="social__item">
+                      <a href="#" class="social__link icon-facebook"></a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link icon-youtube"></a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link icon-vk"></a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link icon-twitter"></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            @@include('html/_form.html', {
+            "title": "Нужна помощь с выбором курса?"
+            })
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+
+  @@include('html/_cookie-popup.html')
+
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

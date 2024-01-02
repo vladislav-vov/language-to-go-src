@@ -1,0 +1,213 @@
+.menu {
+	&__icon {
+	}
+
+	&__body {
+		@media (max-width: $mobile) {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			left: -100%;
+			top: 0;
+			padding: toRem(100) toRem(15) toRem(40) toRem(30);
+			background-color: $purpleMain;
+			color: #fff;
+			overflow: auto;
+			transition: left 0.3s;
+			z-index: 10;
+
+			&::before {
+				content: '';
+				position: fixed;
+				width: 100%;
+				height: toRem(70);
+				left: -100%;
+				top: 0;
+				transition: left 0.3s;
+				z-index: 2;
+			}
+			.menu-open & {
+				left: 0;
+				&::before {
+					left: 0;
+				}
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: toRem(15);
+
+		@media (max-width: $mobile) {
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+		position: relative;
+		color: #333;
+		font-size: toRem(16);
+
+		@media (max-width: $mobile) {
+			width: 100%;
+			color: #fff;
+			font-size: toRem(22);
+			text-align: center;
+		}
+	}
+
+	&__spoller {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		color: #fff;
+		z-index: 5;
+
+		@media (min-width: $mobile) {
+			min-width: toRem(160);
+			background: #fff;
+			color: #333;
+			box-shadow: 0px 4px 20px 0px $purpleSecondry;
+			border-radius: 5px;
+		}
+	}
+
+	&__spoller-item {
+		@media (min-width: $mobile) {
+			padding: toRem(10) toRem(15);
+			border-bottom: 1px solid #efefff;
+		}
+
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: toRem(15);
+			}
+		}
+	}
+
+	&__spoller-link {
+		@media (min-width: $mobile) {
+			padding: 0 !important;
+		}
+	}
+
+	&__link.menu__spoller-title {
+		position: relative;
+
+		&._spoller-active {
+			color: $purpleActive;
+		}
+
+		@media (min-width: $mobile) {
+			display: inline-flex;
+			flex-direction: row-reverse;
+			align-items: center;
+			gap: toRem(5);
+			padding-right: toRem(30);
+
+			&::before {
+				font-size: toRem(14);
+				transition: transform 0.3s ease;
+			}
+		}
+
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: toRem(15);
+			}
+
+			&::before {
+				display: none;
+			}
+		}
+
+		&._spoller-active {
+			&::before {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+
+	&__link {
+		padding: toRem(10) toRem(15);
+		font-family: inherit;
+		color: inherit;
+		font-size: inherit;
+		font-weight: 600;
+		line-height: 1.5;
+		letter-spacing: toRem(0.16);
+
+		@media (max-width: $mobile) {
+			padding: toRem(5) toRem(40);
+		}
+
+		@media (any-hover: hover) {
+			transition: all 0.3s ease;
+
+			&:hover {
+				color: $purpleHover;
+			}
+		}
+	}
+}
+
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: toRem(30);
+		height: toRem(24);
+		z-index: 11;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: '';
+			transition: all 0.3s ease 0s;
+			left: 0;
+			position: absolute;
+			width: 100%;
+			height: toRem(4);
+			background-color: $purpleMain;
+		}
+
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - toRem(2));
+		}
+		.menu-open & {
+			span,
+			&::before,
+			&::after {
+				background-color: #fff;
+			}
+
+			span {
+				transform: scale(0);
+			}
+
+			&::before {
+				top: calc(50% - toRem(2));
+				width: 100%;
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - toRem(2));
+				width: 100%;
+				transform: rotate(45deg);
+			}
+		}
+	}
+}

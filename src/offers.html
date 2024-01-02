@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/_head.htm',{
+"title":"Новая система скидок в Language2GO!"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page support-page">
+      <div class="page__container">
+        <div class="page__columns">
+          <div class="page__content">
+            <div class="page__head article-page__head">
+              <div class="page__head-content">
+                <h1 class="page__title title  title title--h2">Предложения по работе сайта <span>Language to go</span>
+                </h1>
+                <div class="page__text">
+                  <p>Мы всегда готовы становиться лучше! Есть предложения по улучшению работы сайта? Напишите нам</p>
+                </div>
+              </div>
+              <nav class="page__breadcrumbs breadcrumbs">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__item">
+                    <a href="#" class="breadcrumbs__link"><span>Главная</span></a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                    <span class="breadcrumbs__current">Cлужба поддержки</span>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="page__main">
+              <section class="warning">
+                <div class="warning__head">
+                  <h2 class="warning__title title title--h3 title--h3-bold">Заголовок общая информация</h2>
+                  <svg>
+                    <use xlink:href="@img/icons/icons.svg#warning"></use>
+                  </svg>
+                </div>
+                <div class="warning__content">
+                  <div class="warning__text">
+                    <p>Здесь мы собираем предложения по улучшению <span>Language to go</span></p>
+                    <p>Если вы столкнулись с техническими сложностями, <a href="#">свяжитесь с поддержкой</a></p>
+                  </div>
+                  <div class="warning__text">
+                    <p>Пожелания по развитию <span>Language to go</span> можно оставить <a href="#">здесь.</a></p>
+                    <p>Пожелания о добавлении на <span>Language to go</span> курсов, материалов, статей можно оставить
+                      <a href="#">здесь.</a></p>
+                  </div>
+                </div>
+              </section>
+              @@include('html/_form.html', {
+              "title": "Написать в службу поддержки"
+              })
+            </div>
+          </div>
+          <div data-da=".page__head, 991.98, 3" class="page__aside">
+            <div class="page__image">
+              <img src="@img/offers/image.png" alt="Image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+
+  @@include('html/_cookie-popup.html')
+
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

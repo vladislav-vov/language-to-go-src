@@ -1,0 +1,24 @@
+.article-page {
+	&__head {
+		padding-bottom: toRem(30);
+		border-bottom: 1px solid var(--Purple-secondry, #efefff);
+
+		@media (max-width: $mobile) {
+			padding-bottom: toRem(20);
+		}
+	}
+
+	&__section-head {
+		margin-bottom: toRem(30);
+
+		@media (max-width: $mobile) {
+			margin-bottom: toRem(20);
+		}
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: toRem(30);
+	}
+}

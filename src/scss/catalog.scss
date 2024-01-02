@@ -1,0 +1,105 @@
+.catalog {
+	@extend %section-pb;
+
+	&__container {
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		gap: toRem(40);
+
+		@media (max-width: $tablet) {
+			flex-direction: column-reverse;
+			gap: toRem(20);
+		}
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(toRem(360), 1fr));
+		gap: toRem(40);
+		flex: 1 1 auto;
+
+		@media (max-width: $tablet) {
+			gap: toRem(30);
+		}
+
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__filter {
+		@media (min-width: $tablet) {
+			max-width: toRem(330);
+			width: 100%;
+		}
+	}
+}
+
+.catalog-filter {
+	&__btn {
+		font-size: toRem(24);
+
+		@media (min-width: $tablet) {
+			display: none;
+		}
+
+		@media (max-width: $mobile) {
+			font-size: toRem(18);
+		}
+	}
+
+	&__items {
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+
+		@media (max-width: $tablet) {
+			&:not(:last-child) {
+				margin-bottom: toRem(15);
+			}
+		}
+	}
+}
+
+.catalog-filter-item {
+	padding: toRem(30);
+	border-radius: 10px;
+	box-shadow: 0px 4px 20px 0px #f7f6fb;
+
+	@media (max-width: $tablet) {
+		padding: toRem(10);
+	}
+
+	&__title {
+		margin-bottom: toRem(15);
+		color: #000;
+	}
+
+	&__checkbox {
+		position: relative;
+
+		&:not(:last-child) {
+			margin-bottom: toRem(18);
+		}
+	}
+
+	&__checkbox-box {
+		position: absolute;
+		top: toRem(4);
+		left: 0;
+	}
+
+	&__checkbox-label {
+		padding-left: toRem(40);
+		color: #828282;
+		font-size: 16px;
+		line-height: 1.5;
+		letter-spacing: toRem(0.32);
+	}
+}

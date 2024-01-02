@@ -1,0 +1,170 @@
+@use 'sass:math';
+
+@import './fonts/fonts';
+@import './fonts/icons';
+
+@import 'base/vars';
+@import 'base/mixins';
+@import 'base/null';
+@import 'base/menu';
+
+body {
+	font-family: 'Gilroy', sans-serif;
+	@include adaptiveValue('font-size', 20, 16);
+	font-weight: 500;
+	line-height: 1.4;
+	letter-spacing: toRem(0.2);
+	background-color: #fff;
+	color: $mainColor;
+
+	.lock & {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+	.loaded & {
+	}
+}
+
+svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	@supports (overflow: clip) {
+		overflow: clip;
+	}
+
+	> main {
+		flex: 1 1 auto;
+	}
+
+	> * {
+		min-width: 0;
+	}
+}
+
+button {
+	font-family: inherit;
+}
+
+a {
+	@media (any-hover: hover) {
+		transition: all 0.3s ease;
+
+		&:hover {
+			color: $purpleHover;
+		}
+	}
+}
+
+%list-counter {
+	&::before {
+		counter-increment: counter;
+		content: counter(counter);
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+%section-counter {
+	@extend %list-counter;
+
+	&::before {
+		content: '0' counter(counter);
+		padding: toRem(4) toRem(22);
+		background-color: $blueHover;
+		color: #fff;
+		border-radius: 100px;
+		font-size: toRem(18);
+		font-weight: 700;
+		line-height: 1.13;
+		letter-spacing: toRem(0.18);
+	}
+
+	&:nth-child(3n - 1) {
+		&::before {
+			background-color: $purpleMain;
+		}
+	}
+
+	&:nth-child(3n) {
+		&::before {
+			background-color: $redMain;
+		}
+	}
+
+	@media (max-width: $mobile) {
+		&::before {
+			left: 50%;
+			transform: translate(-50%, 0);
+		}
+	}
+}
+
+%section-pb {
+	@include adaptiveValue('padding-bottom', 100, 40);
+}
+
+%price-icon {
+	display: inline-flex;
+	align-items: center;
+	gap: toRem(5);
+
+	&::after {
+		content: '\e902';
+		display: block;
+		font-weight: 900;
+		font-size: toRem(18);
+		@extend %ic;
+	}
+}
+
+[class*='__container'] {
+	@if ($maxWidthContainer>0) {
+		max-width: toRem($containerWidth);
+		margin: 0 auto;
+	}
+	@if ($containerPadding>0) {
+		@if ($maxWidthContainer>0) {
+			padding: 0 toRem(math.div($containerPadding, 2));
+		} @else {
+			@include adaptiveValue(
+				'padding-left',
+				math.div($containerPadding, 2),
+				15
+			);
+			@include adaptiveValue(
+				'padding-right',
+				math.div($containerPadding, 2),
+				15
+			);
+		}
+	}
+}
+
+@import 'common';
+
+@import 'header';
+@import 'footer';
+
+@import 'home';
+@import 'catalog';
+@import 'course';
+@import 'blog';
+@import 'article';
+@import 'faq';
+@import 'contacts';
+@import 'about';
+@import 'support';
+@import 'offers';
+@import 'login';
+
+@import 'popup';

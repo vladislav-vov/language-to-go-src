@@ -1,0 +1,40 @@
+@import './mixins';
+
+$fontFamily: '';
+$fontSize: toRem(20);
+
+$mainColor: #585858;
+$titleColor: #232323;
+
+$purpleMain: #78258d;
+$purpleHover: #a651bb;
+$purpleActive: #641f76;
+$purpleFocus: #d2b6d9;
+$purpleSecondry: #efefff;
+$purpleBorder: #bb92c6;
+
+$redMain: #e42125;
+$redHover: #e84649;
+$redActive: #be1c1f;
+$redFocus: #f6b5b6;
+$redSecondry: #ffefef;
+$redBorder: #f19092;
+
+$blueMain: #51a2d9;
+$blueHover: #2e90d1;
+$blueActive: #2678ae;
+$blueFocus: #b9daf0;
+$blueSecondry: #def1ff;
+$blueBorder: #96c7e8;
+
+$minWidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 1470;
+$containerPadding: 30;
+
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+$pc: em($containerWidth);
+$tablet: em(991.98);
+$mobile: em(767.98);
+$mobileSmall: em(479.98);
